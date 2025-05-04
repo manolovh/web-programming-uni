@@ -125,6 +125,10 @@ public class HangmanGameService {
     return null;
   }
 
+  public List<HangmanGame> getAllGames() {
+    return storedGamesCollection;
+  }
+
   @PreDestroy
   public void destroy(){
     System.out.println("Този методи се извиква когато bean-a се премахне. (приложението спре да работи)");
