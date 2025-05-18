@@ -100,6 +100,11 @@ public class HangmanGameService implements GameService {
     return gameRepository.findByStatus(status);
   }
 
+  @Override
+  public List<HangmanGame> getRecentGames() {
+    return gameRepository.findTop10ByOrderByStartedOnDateDesc();
+  }
+
   private boolean checkIsLetterWrong(String wordToGuess, char letter){
     return wordToGuess.indexOf(letter) == -1;
   }

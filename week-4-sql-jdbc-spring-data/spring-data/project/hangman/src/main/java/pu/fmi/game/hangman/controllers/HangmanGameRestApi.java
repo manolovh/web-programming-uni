@@ -55,4 +55,8 @@ public class HangmanGameRestApi {
     return hangmanGameService.findAllByStatus(status);
   }
 
+  @GetMapping
+  public List<HangmanGame> getRecentGames() {
+    return hangmanGameService.getRecentGames();
+  }
 }

@@ -16,4 +16,6 @@ public interface GameService {
   HangmanGame getGameById(Long id);
 
   List<HangmanGame> getAllGames();
+
+  List<HangmanGame> getRecentGames();
 }
